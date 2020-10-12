@@ -34,6 +34,7 @@ async function userDataGet(req, res) {
         // const latDiff = (dbLat-dataLat)
         const longDiff = (dataLong-dbLong)
         console.log('difference', longDiff)
+        console.log('Hey, hows u')
 
         // calculate the equation
         const centralAngle = Math.acos( Math.sin(dbLat) * Math.sin(dataLat) + Math.cos(dbLat) * Math.cos(dataLat) * Math.cos(longDiff))
@@ -50,7 +51,7 @@ async function userDataGet(req, res) {
       function convert() {
         const km = d / 1000
         if ( km <= 100 ) {
-          user.push(km)
+          users.push(km)
           console.log(user)
           newarray.push(users)
           // console.log(newarray)
