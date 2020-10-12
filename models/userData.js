@@ -4,7 +4,8 @@ const userDataScema = new mongoose.Schema({
   user_id: { type: Number },
   latitude: { type: Number },
   name: { type: String },
-  longitude: { type: Number }
+  longitude: { type: Number },
+  distance: { type: Number }
 })
 
 module.exports = mongoose.model('userData', userDataScema)

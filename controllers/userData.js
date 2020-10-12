@@ -11,8 +11,9 @@ async function userDataGet(req, res) {
   try {
     const users = await UserData.find()
     // console.log(users)
-    const newarray = []
-    console.log(newarray)
+    // const newarray = []
+    const newUsers = {}
+    // console.log(newarray)
     // const newArray = userDataNew
     // console.log(newArray)
     users.forEach((user) => {
@@ -34,7 +35,6 @@ async function userDataGet(req, res) {
         // const latDiff = (dbLat-dataLat)
         const longDiff = (dataLong-dbLong)
         console.log('difference', longDiff)
-        console.log('Hey, hows u')
 
         // calculate the equation
         const centralAngle = Math.acos( Math.sin(dbLat) * Math.sin(dataLat) + Math.cos(dbLat) * Math.cos(dataLat) * Math.cos(longDiff))
@@ -50,11 +50,12 @@ async function userDataGet(req, res) {
       // convert d (answer in meters) to km
       function convert() {
         const km = d / 1000
+
+        // console.log(newArray)
         if ( km <= 100 ) {
-          users.push(km)
-          console.log(user)
-          newarray.push(users)
-          // console.log(newarray)
+          newArray = { user_id: user.user_id, distance: km, name: user.name }
+          // newArray.push(user)
+          console.log('convert', newArray)
         }
         // converstion = km.toFixed(1) + ' km'
         // console.log(converstion)
@@ -62,7 +63,10 @@ async function userDataGet(req, res) {
       convert()
       // console.log('conversion: ', converstion)
     })
-    res.status(201).json(users)
+    newUsers.push(newArray)
+    console.log(newUsers)
+    // console.log('out of scope', newArray)
+    res.status(201).json(newArray)
   } catch (err) {
     console.log(err)
   }
