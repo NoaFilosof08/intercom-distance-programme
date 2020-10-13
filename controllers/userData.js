@@ -15,15 +15,15 @@ async function userDataGet(req, res) {
         // Convert degrees into radians
         const dbLong = -6.257664 * Math.PI/180
         const dbLat = 53.339428 * Math.PI/180
-        console.log(dbLong, dbLat)
+        console.log('DUBLIN: ', dbLong, dbLat)
 
         const datasetLong = user.longitude
         const datasetLat = user.latitude
-        console.log('long', datasetLong, 'lat', datasetLat)
+        console.log('USER long', datasetLong, 'USER lat', datasetLat)
 
         const dataLong = datasetLong * Math.PI/180
         const dataLat = datasetLat * Math.PI/180
-        console.log(dataLong, dataLat)
+        console.log('USER DATA IN RADIANS', dataLong, dataLat)
 
         // calculate the absolute distance between the longitudes and latitudes
         const longDiff = (dataLong-dbLong)
@@ -46,9 +46,7 @@ async function userDataGet(req, res) {
         if ( km <= 100 ) {
           const conversion = km.toFixed(1) + ' km'
           const newObject = { user_id: user.user_id, distance: conversion, name: user.name }
-          console.log('convert', newObject)
           newUsers.push(newObject)
-          console.log(newUsers)
         }
       }
       convert()
@@ -62,16 +60,15 @@ async function userDataGet(req, res) {
   }
 }
 
-async function userDelete(req, res, next) {
+async function userDelete(req, res) {
   try {
-    const userToDelete =  await userData.findById(req.params.id) // ? <-- find the queen to be deleted by its id
-    await userToDelete.remove() // ? <-- if it is yours, delete it
-    res.sendStatus(204) // ? <-- and send back status no content
+    const userToDelete =  await userData.findById(req.params.id)
+    await userToDelete.remove()
+    res.sendStatus(204)
   } catch (err) {
     console(err)
   }
 }
-
 
 module.exports = {
   index: userDataIndex,
