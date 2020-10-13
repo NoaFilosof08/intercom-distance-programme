@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const dbURI = 'mongodb://localhost/intercom'
 const UserData = require('../models/userData')
 const Data = require('./data/userData')
-// const { use } = require('../config/router')
 
 mongoose.connect(
   dbURI,
