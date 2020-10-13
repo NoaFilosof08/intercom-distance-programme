@@ -24,6 +24,7 @@ First I wanted to make myself familiar with the equation. I looked at the linked
 I first tested this formula worked with the data I was given and checked it in this converter: https://www.movable-type.co.uk/scripts/latlong.html
 
 Once I was happy with my understanding of the Maths, I went ahead and built a basic MongoDB, Express and Node.js app. This app contains:
+- Index; the index.js file runs the programme as a MongoDB app. The format of this is fairly boilerplate - can be found in 'index.js'
 - User Schema; this is where my data is model and acts as the 'blue print' of the data - can be found in 'models/userData.js'
 - Seeds; this is where I create the data itself from my 'data' file - this data file is the JSON list given in the brief - seeds can be found in 'db/seeds.js' and data itself can be found in: 'db/data/userData.js'
 - Controller; this is where I perform all the functions/formulae/requests - can be found in 'controllers/userData.js'
@@ -53,7 +54,8 @@ Upon install run `npm install` --> this should install mongoDB/express
   3) `mongod --dbpath ~/data/db`
 )
 Then run `npm run seed` --> this will create the initial data set
-Attached you will see an Insomnia.JSON file. I tested all my requests in Insomnia. Here you will be able to copy and paste the file and drop it into Insomnia.
+
+Attached you will see an Insomnia.JSON file. I tested all my requests in Insomnia. Here you will be able to copy and paste the file and drop it into Insomnia in order to test the programme.
 
 To run the programme please run `npm run start` and run the first get request. Test this in Insomnia, under the 'GET ALL USERS' REQUEST. There should already be a URL in the nav bar, if not, copy and paste in this URL 'localhost:4000/users/' and press 'Send'. This should produce the full list of users.
 (If there is a user at the top of the list which contains only an "_id" and "_v" (as oppposed to "_id", "latitude", "user_id", "name", "longitude", "__v") please perform the following:
@@ -61,6 +63,8 @@ To run the programme please run `npm run start` and run the first get request. T
 )
 
 Next we can perform the formula. Navigate to the 'GET ALL USERS AND PERFORM EQUATION' request. In the nav bar the URL should look like this: 'localhost:4000/allusers/', if not then copy that in. This will perform the equation, and also return the list of the users within 100km in ascending order.
+
+The output (the list of all users within 100km of the Dublin Office) can also be found here: 'output.txt'
 
 ## Challenges
 - Test: I'm not so familiar with building and running tests, so I decided to test it externally, specifically the equations.
