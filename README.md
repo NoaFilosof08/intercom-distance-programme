@@ -76,5 +76,6 @@ The output (the list of all users within 100km of the Dublin Office) can also be
 I left some comments and console.logs in so that you can clearly see which part of my code is doing what, specifically for the equation/formula part.
 
 ## My Proudest Achievement
+One of my proudest achievements was the summer I spent 5 weeks as a dance teacher in Montreal, Canada in 2016. I built such a strong bond with the campers who I lived in a bunk with; one night one of the girls gave me a friendship bracelet that she had made in her art elective as I was her favourite counsellor. At the end of the session one of the parents came up to me and gave me a huge hug and a gift, and said I had made their daughters summer. Throughout the year, the campers would sometimes email me videos of the dances they had learnt from me and said how they taught their other friends. Small moments like those just made me so proud of the impact I had on the campers!
 
 / + MongoDB attaches an ID to each item Object in an array, when it does this it sometimes creates an additional plain one. This made it difficult to perform my function and formulas, so I decided the best way around this was to delete it.
