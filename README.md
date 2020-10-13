@@ -68,6 +68,9 @@ Next we can perform the formula. Navigate to the 'GET ALL USERS AND PERFORM EQUA
 - Coming to grips with the formula and 'translating' it into JavaScript.
 - Refactoring my code down into seperate functions; when I did this it messed with my reqests so I decided to leave it all in one place!
 
+## Additional notes:
+I left some comments and console.logs in so that you can clearly see which part of my code is doing what, specifically for the equation/formula part.
+
 ## My Proudest Achievement
 
 / + MongoDB attaches an ID to each item Object in an array, when it does this it sometimes creates an additional plain one. This made it difficult to perform my function and formulas, so I decided the best way around this was to delete it.
