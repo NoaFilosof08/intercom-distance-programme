@@ -10,7 +10,6 @@ async function userDataGet(req, res) {
   try {
     const users = await UserData.find()
     const newUsers = []
-
     users.forEach((user) => {
       function equation() {
         // Convert degrees into radians
@@ -46,13 +45,16 @@ async function userDataGet(req, res) {
         const km = d / 1000
         if ( km <= 100 ) {
           const conversion = km.toFixed(1) + ' km'
-          const newArray = { user_id: user.user_id, distance: conversion, name: user.name }
-          console.log('convert', newArray)
-          newUsers.push(newArray)
+          const newObject = { user_id: user.user_id, distance: conversion, name: user.name }
+          console.log('convert', newObject)
+          newUsers.push(newObject)
           console.log(newUsers)
         }
       }
       convert()
+    })
+    newUsers.sort(function(a, b) {
+      return a.user_id - b.user_id
     })
     res.status(201).json(newUsers)
   } catch (err) {

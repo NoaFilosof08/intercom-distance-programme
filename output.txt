@@ -1,0 +1,82 @@
+[
+  {
+    "user_id": 4,
+    "distance": "10.6 km",
+    "name": "Ian Kehoe"
+  },
+  {
+    "user_id": 5,
+    "distance": "23.3 km",
+    "name": "Nora Dempsey"
+  },
+  {
+    "user_id": 6,
+    "distance": "24.1 km",
+    "name": "Theresa Enright"
+  },
+  {
+    "user_id": 8,
+    "distance": "83.5 km",
+    "name": "Eoin Ahearn"
+  },
+  {
+    "user_id": 11,
+    "distance": "38.1 km",
+    "name": "Richard Finnegan"
+  },
+  {
+    "user_id": 12,
+    "distance": "41.8 km",
+    "name": "Christina McArdle"
+  },
+  {
+    "user_id": 13,
+    "distance": "62.2 km",
+    "name": "Olive Ahearn"
+  },
+  {
+    "user_id": 15,
+    "distance": "43.7 km",
+    "name": "Michael Ahearn"
+  },
+  {
+    "user_id": 17,
+    "distance": "96.1 km",
+    "name": "Patricia Cahill"
+  },
+  {
+    "user_id": 23,
+    "distance": "82.7 km",
+    "name": "Eoin Gallagher"
+  },
+  {
+    "user_id": 24,
+    "distance": "89.0 km",
+    "name": "Rose Enright"
+  },
+  {
+    "user_id": 26,
+    "distance": "98.9 km",
+    "name": "Stephen McArdle"
+  },
+  {
+    "user_id": 29,
+    "distance": "72.2 km",
+    "name": "Oliver Ahearn"
+  },
+  {
+    "user_id": 30,
+    "distance": "82.6 km",
+    "name": "Nick Enright"
+  },
+  {
+    "user_id": 31,
+    "distance": "44.3 km",
+    "name": "Alan Behan"
+  },
+  {
+    "user_id": 39,
+    "distance": "38.4 km",
+    "name": "Lisa Ahearn"
+  }
+]
